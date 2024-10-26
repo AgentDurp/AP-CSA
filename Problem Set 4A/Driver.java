@@ -24,7 +24,8 @@ class Driver{
          */
         //stdDrawer.grid();
         //stdDrawer.curve();
-        stdDrawer.circles();
+        //stdDrawer.circles();
+        stdDrawer.sierpinsky();
 
     }
 }

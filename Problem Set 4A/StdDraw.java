@@ -788,7 +788,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         onscreen.setBackground(DEFAULT_BACKGROUND_COLOR);
         onscreen.clearRect(0, 0, 2*width, 2*height);
 
-     	// set the pen color
+         // set the pen color
         offscreen.setColor(DEFAULT_PEN_COLOR);
 
         // add antialiasing
