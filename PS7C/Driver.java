@@ -11,8 +11,18 @@ public class Driver
         arr2.add(0);
         arr2.add(1);
         arr2.add(1);
+        arr2.add(9);
+        arr2.add(9);
+        arr2.add(9);
+        arr2.add(9);
+        arr2.add(9);
+        arr2.add(9);
+        arr2.add(9);
+        arr2.add(9);
+        arr2.add(9);
         
-        System.out.println(arr1+""+arr2);
+        System.out.println(PrimeSieve.PrimeSieve(10000));        
+        System.out.println(PrimeSieve.GoldBachPair(10000));
         System.out.println(PrimeSieve.BigInts(arr1,arr2));
     }
 }
