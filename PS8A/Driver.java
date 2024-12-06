@@ -8,19 +8,29 @@ public class Driver{
     public static void main(String[] args){
         int player=-1;
         int won=0;
+        boolean playAgain=true;
+        Scanner in=new Scanner(System.in);
         String[][] nums=new String[3][3];//the board
-        nums=initializeBoard(nums);
-        while(won==0){//plays the game. not much point in making this another method imo
+        while(playAgain){
+            nums=initializeBoard(nums);
+            while(checkWinState(nums)==0){//plays the game. not much point in making this another method imo
+                printBoard(nums);
+                player=playerIn(nums,player);
+                if(won!=0){//if a player has won, stop playing
+                    break;
+                }
+            }
             won=checkWinState(nums);
             printBoard(nums);
-            player=playerIn(nums,player);
-            if(won!=0){//if a player has won, stop playing
-                break;
+            System.out.println("player "+won+" won");
+            System.out.println("Do you want to play again? Y/N");
+             if(in.nextLine().equals("N")){
+                playAgain=false;
             }
+            nums=initializeBoard(nums);
         }
-        System.out.println("player "+won+" won");
+        System.exit(0);
     }
-
     public static void printBoard(String[][] nums){
         //prints the current board state
         for(int row=0;row<nums.length;row++){
