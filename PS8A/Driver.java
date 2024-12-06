@@ -8,12 +8,15 @@ public class Driver{
     public static void main(String[] args){
         int player=-1;
         int won=0;
+        int round=0;
         boolean playAgain=true;
         Scanner in=new Scanner(System.in);
         String[][] nums=new String[3][3];//the board
         while(playAgain){
             nums=initializeBoard(nums);
             while(checkWinState(nums)==0){//plays the game. not much point in making this another method imo
+                round++;
+                System.out.println(round);
                 printBoard(nums);
                 player=playerIn(nums,player);
                 if(won!=0){//if a player has won, stop playing
@@ -28,6 +31,7 @@ public class Driver{
                 playAgain=false;
             }
             nums=initializeBoard(nums);
+            round=0;
         }
         System.exit(0);
     }
