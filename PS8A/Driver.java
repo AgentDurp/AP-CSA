@@ -47,7 +47,8 @@ public class Driver{
 
     public static int playerIn(String[][] nums, int player){
         //takes player coordinate input and places an X or O depending on whos turn it is 
-        //returns which player it is so that the main method knows 
+        //returns which player it is so that the main method knows
+        System.out.println("player "+player+" make your move");
         Scanner in=new Scanner(System.in);
         String input=in.nextLine();
         String[] split=input.split(",");
