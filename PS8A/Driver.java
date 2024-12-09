@@ -34,7 +34,9 @@ public class Driver{
             round=0;
         }
         System.exit(0);
-    }
+        }
+        
+    
     public static void printBoard(String[][] nums){
         //prints the current board state
         for(int row=0;row<nums.length;row++){
@@ -48,7 +50,11 @@ public class Driver{
     public static int playerIn(String[][] nums, int player){
         //takes player coordinate input and places an X or O depending on whos turn it is 
         //returns which player it is so that the main method knows
-        System.out.println("player "+player+" make your move");
+        if(player==-1){
+        System.out.println("player 1 make your move");
+    }else{
+        System.out.println("player 2 make your move");
+    }
         Scanner in=new Scanner(System.in);
         String input=in.nextLine();
         String[] split=input.split(",");
@@ -56,7 +62,7 @@ public class Driver{
         for(int i=0;i<split.length;i++){
             coords[i]=Integer.parseInt(split[i]);
         }
-        while(nums[coords[0]][coords[1]].equals(" ")){
+        while(coords[0]<=2&&coords[1]<=2&&nums[coords[0]][coords[1]].equals(" ")){
 
             if(player==-1){
                 nums[coords[0]][coords[1]]="X";
@@ -71,6 +77,7 @@ public class Driver{
 
     public static int checkWinState(String[][] nums){
         int won=0;
+        
         //won represents the player who has won, if its 0 the game continues, if 1 X's one, if 2 O's won
         //returns int won
         for(int row=0;row<nums.length;row++){//a loop to check vertical and horizontal win conditions
