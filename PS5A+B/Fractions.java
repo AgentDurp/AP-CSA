@@ -131,7 +131,6 @@ public class Fractions{
 
     public static void fractionGame(){
         int numCorrect=0;
-        int numIncorrect=0;
         int numQuestions=0;
         System.out.println("press enter to start");
         while(!in.nextLine().equals("quit")){
@@ -147,7 +146,6 @@ public class Fractions{
                         numCorrect++;
                         System.out.println("Correct!");
                     }else{
-                        numIncorrect++;
                         System.out.println("Wrong, the answer was "+Fractions.add(frac1,frac2));
                     }
                     numQuestions++;
@@ -160,7 +158,6 @@ public class Fractions{
                         numCorrect++;
                         System.out.println("Correct!");
                     }else{
-                        numIncorrect++;
                         System.out.println("Wrong, the answer was "+Fractions.subtract(frac1,frac2));
                     }
                     numQuestions++;
@@ -173,7 +170,6 @@ public class Fractions{
                         numCorrect++;
                         System.out.println("Correct!");
                     }else{
-                        numIncorrect++;
                         System.out.println("Wrong, the answer was "+Fractions.multiply(frac1,frac2));
                     }
                     numQuestions++;
@@ -186,7 +182,7 @@ public class Fractions{
                         numCorrect++;
                         System.out.println("Correct!");
                     }else{
-                        numIncorrect++;
+                       
                         System.out.println("Wrong, the answer was "+Fractions.divide(frac1,frac2));
                     }
                     numQuestions++;
